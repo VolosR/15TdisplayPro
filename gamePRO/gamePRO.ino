@@ -146,7 +146,7 @@ void setup()
 
     // Initialize capacitive touch
     touch.setPins(BOARD_TOUCH_RST, BOARD_TOUCH_IRQ);
-    touch.init(Wire, BOARD_I2C_SDA, BOARD_I2C_SCL, CST226SE_SLAVE_ADDRESS);
+    touch.begin(Wire, CST226SE_SLAVE_ADDRESS, BOARD_I2C_SDA, BOARD_I2C_SCL);
 
     sprite.createSprite(222,222);
     spr.createSprite(212,212);
